@@ -20,12 +20,18 @@ const UserSchema = new Schema({
     // 创建头像
     avatar:{
         type:String,
+        
     },
-    // // 创建日期
-    // date:{
-    //     type:Date,
-    //     required:true
-    // }
+     // 判断身份前端根据这个字段来展示不同的页面
+     identity:{
+        type:String,
+        required:true
+    },
+    // 创建日期
+    date:{
+        type:Date,
+        default:Date.now 
+    }
 })
 
 /************** 编译模型Model **************/
