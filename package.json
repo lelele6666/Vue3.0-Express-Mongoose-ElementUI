@@ -9,5 +9,14 @@
     "server": "nodemon server.js"
   },
   "author": "zhangyu",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "bcrypt": "^3.0.1",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "gravatar": "^1.6.0",
+    "jsonwebtoken": "^8.3.0",
+    "passport": "^0.4.0",
+    "passport-jwt": "^4.0.0"
+  }
 }

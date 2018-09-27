@@ -27,7 +27,17 @@ app.use('/api/users',users)
 
 //引入文件模块
 const fs = require('fs')
+//引入处理路径模块
+const path = require('path')
 //因为是单页面应用，所有的请求都走/dist/index.html
 app.get('*',(req,res) => {
     const html = fs.readFileSync(path.resolve(__dirname,'../dist/index.html'),'utf-8')
 })
+
+//引入passport模块验证token
+const passport = require('passport')
+//需要进行初始化
+app.use(passport.initialize())
+//通过引入 passort文件来实现代码的抽离
+require('./config/passport')(passport)
+

@@ -4,7 +4,7 @@ const Schema = mongoose.Schema;
 
 //create Schema
 const UserSchema = new Schema({
-    _id:Schema.Types.ObjectId ,
+    // _id:Schema.Types.ObjectId ,
     name:{
         type:String,
         required:true
@@ -39,4 +39,4 @@ const UserSchema = new Schema({
 
 User = mongoose.model('users', UserSchema,'users',false)
 
-module.exports = Userc
+module.exports = User
